@@ -1,0 +1,144 @@
+:root {
+  --bg: #1a1033;
+  --card: #241848;
+  --text: #f5eefc;
+  --btn: #33265e;
+  --glow: #c084fc;
+  --op: #8b5cf6;
+  --eq: #ec4899;
+}
+
+body.light {
+  --bg: #f3e8ff;
+  --card: #ffffff;
+  --text: #2b1b3d;
+  --btn: #f1e9fb;
+  --glow: #a855f7;
+  --op: #a855f7;
+  --eq: #ec4899;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.wrap {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.calc, .history {
+  background: var(--card);
+  border-radius: 26px;
+  padding: 20px;
+  box-shadow: 0 0 25px var(--glow);
+}
+
+.calc { width: 340px; }
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top h1 {
+  font-size: 20px;
+  margin: 0;
+  text-shadow: 0 0 10px var(--glow);
+}
+
+.top button, .h-top button {
+  border: none;
+  background: var(--btn);
+  color: var(--text);
+  padding: 6px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-left: 4px;
+}
+
+.screen {
+  text-align: right;
+  padding: 14px 6px;
+  min-height: 100px;
+}
+
+#small {
+  font-size: 15px;
+  opacity: 0.6;
+  min-height: 20px;
+}
+
+#big {
+  font-size: 42px;
+  font-weight: bold;
+  word-break: break-all;
+  text-shadow: 0 0 12px var(--glow);
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.keys button {
+  border: none;
+  border-radius: 16px;
+  padding: 16px 0;
+  font-size: 20px;
+  background: var(--btn);
+  color: var(--text);
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+.keys button:hover {
+  box-shadow: 0 0 12px var(--glow);
+}
+
+.keys button:active {
+  transform: scale(0.9);
+}
+
+.keys .op { background: var(--op); color: #fff; }
+.keys .eq { background: var(--eq); color: #fff; }
+.keys .red { color: #ff6b81; }
+
+.history {
+  width: 240px;
+  max-height: 480px;
+  overflow-y: auto;
+}
+
+.h-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.history h3 { margin: 0; }
+
+.history p {
+  font-size: 14px;
+  border-bottom: 1px dashed var(--glow);
+  padding-bottom: 6px;
+}
+
+.history .empty { opacity: 0.5; border: none; }

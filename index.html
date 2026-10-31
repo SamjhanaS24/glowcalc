@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Glowcalc</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="wrap">
+
+    <div class="calc">
+      <div class="top">
+        <h1>Glowcalc ✨</h1>
+        <div>
+          <button id="themeBtn" title="Change theme">☀️</button>
+          <button id="langBtn" title="Nepali digits">नेपाली</button>
+        </div>
+      </div>
+
+      <div class="screen">
+        <div id="small"></div>
+        <div id="big">0</div>
+      </div>
+
+      <div class="keys">
+        <button data-act="sqrt">√</button>
+        <button data-act="square">x²</button>
+        <button data-act="pi">π</button>
+        <button data-act="inverse">1/x</button>
+
+        <button data-act="clear" class="red">C</button>
+        <button data-act="back">⌫</button>
+        <button data-act="percent">%</button>
+        <button class="op" data-op="/">÷</button>
+
+        <button data-num="7">7</button>
+        <button data-num="8">8</button>
+        <button data-num="9">9</button>
+        <button class="op" data-op="*">×</button>
+
+        <button data-num="4">4</button>
+        <button data-num="5">5</button>
+        <button data-num="6">6</button>
+        <button class="op" data-op="-">−</button>
+
+        <button data-num="1">1</button>
+        <button data-num="2">2</button>
+        <button data-num="3">3</button>
+        <button class="op" data-op="+">+</button>
+
+        <button data-act="sign">±</button>
+        <button data-num="0">0</button>
+        <button data-num=".">.</button>
+        <button class="eq" data-act="equals">=</button>
+      </div>
+    </div>
+
+    <div class="history">
+      <div class="h-top">
+        <h3>📜 History</h3>
+        <button id="clearHist">Clear</button>
+      </div>
+      <div id="list"><p class="empty">Nothing yet</p></div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
